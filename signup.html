@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Commeownity</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container2">
+                <img src="images/logocat.png" alt="ComMEOWnity Logo" class="logo2">
+                <span class="logo-text2">OMMEOWNITY</span>
+            </div>
+
+            <form id="create-account-form">
+                <h2>Create your account</h2>
+                <div class="input-field">
+                    <label for="username">Name*</label>
+                    <input type="text" id="username" placeholder="Enter your name" required>
+                    <span class="error-message" id="username-error"></span>
+                </div>
+                <div class="input-field">
+                    <label for="email">e-mail*</label>
+                    <input type="email" id="email" placeholder="Enter your e-mail" required>
+                    <span class="error-message" id="email-error"></span>
+                </div>
+                <div class="input-field">
+                    <label for="password">password*</label>
+                    <input type="password" id="password" placeholder="use 8 characters" required>
+                    <span class="error-message" id="password-error"></span>
+                </div>
+                <div class="bottom-rectangle"></div>
+                <div class="login-btn-container">
+                    <button type="submit" id="login-btn">Sign-in</button>
+                    <p>Already have an account? <a href="login.html">Log-in here</a></p>
+                </div>
+            </form>
+            <img class="cat-image" src="images/laycat.png" alt="Black Cat">
+        </div>
+
+        <script>
+            // JavaScript for sign-up page
+            document.getElementById('create-account-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent form submission
+
+                const username = document.getElementById('username').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+
+                let isValid = true;
+
+                // Validate username (at least 5 characters)
+                if (username.length < 5) {
+                    document.getElementById('username-error').textContent = "Username must be at least 5 characters.";
+                    document.getElementById('username-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('username-error').style.display = 'none';
+                }
+
+                // Validate email
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    document.getElementById('email-error').textContent = "Please enter a valid email address.";
+                    document.getElementById('email-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('email-error').style.display = 'none';
+                }
+
+                // Validate password (at least 8 characters)
+                if (password.length < 8) {
+                    document.getElementById('password-error').textContent = "Password must be at least 8 characters.";
+                    document.getElementById('password-error').style.display = 'block';
+                    isValid = false;
+                } else {
+                    document.getElementById('password-error').style.display = 'none';
+                }
+
+                // Redirect if form is valid
+                if (isValid) {
+                    window.location.href = "login.html"; // Redirect to the login page
+                }
+            });
+
+            function toggleAnswer(element) {
+                const answer = element.nextElementSibling;
+                const arrow = element.querySelector('.arrow');
+
+                if (answer.style.display === "block") {
+                    answer.style.display = "none";
+                    arrow.innerHTML = "&#x25BC;"; // Down arrow
+                } else {
+                    answer.style.display = "block";
+                    arrow.innerHTML = "&#x25B2;"; // Up arrow
+                }
+            }
+        </script>
+    </body>
+</html>

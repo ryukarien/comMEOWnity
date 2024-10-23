@@ -1,0 +1,544 @@
+
+/* STYLES FOR START PAGE, SIGN-UP PAGE & LOG-IN PAGE */
+
+/*===================================================================*/
+/* STYLES FOR START PAGE */
+/*===================================================================*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container for logo and text */
+.logo-container1 {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+/* Style the logo */
+.logo {
+    width: 80px; 
+    height: auto;
+}
+
+/* Video background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+.logo-text {
+    font-family: "Poppins", sans-serif; 
+    font-weight: 700;  
+    font-size: 2.2em; 
+    color: #DFA600; 
+}
+
+.bodystart {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
+    padding-bottom: 100px; 
+}
+
+/* Styling for content */
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    padding: 20px;
+}
+
+/* Text section for heading and tagline */
+.text-section {
+    align-self: flex-start; 
+    padding-right: 40em;
+    margin-top: 10em; /
+}
+
+.text-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.text-section p.tagline {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Button section styling */
+.buttonStart {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
+}
+
+.buttonStart .btn {
+    padding: 15px 40px;
+    font-family: "Poppins", serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Styling for login button */
+.login {
+    background-color: #FFC107;
+    color: #000;
+}
+
+/* Styling for signup button */
+.signup {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Footer Styles */
+.footer1 {
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: absolute; 
+    bottom: 0; 
+}
+
+
+/*===================================================================*/
+/* STYLES FOR SIGN-UP PAGE */
+/*===================================================================*/
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; 
+    background: linear-gradient(to bottom, #ffcd00, #ff7e00); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    flex-direction: column; 
+}
+
+.logo-container2 {
+    display: flex; 
+    align-items: center; 
+    gap: 1em; 
+    position: absolute; 
+    top: 20px; 
+    left: 20px; 
+}
+
+.logo2 {
+    width: 60px; 
+    height: auto; 
+}
+
+.logo-text2 {
+    font-family: "Poppins", sans-serif; 
+    text-align: left; 
+    font-weight: 700; 
+    font-size: 1.3em;
+    color: #e87714; 
+}
+
+form {
+    padding: 20px; 
+    border-radius: 15px; 
+    width: 100%; 
+    max-width: 400px; 
+}
+
+h2 {
+    color: #2d2929; 
+    font-weight: bold; 
+    text-align: center; 
+    font-family: "Poppins", sans-serif; 
+}
+
+.input-field {
+    margin-bottom: 15px; 
+}
+
+label {
+    display: block; 
+    font-size: 0.9em; 
+    color: #211e1e; 
+    margin-bottom: 5px; 
+}
+
+input {
+    width: 100%; 
+    padding: 10px; 
+    border: 2px solid #232020; 
+    border-radius: 25px; 
+    background-color: #ffcc0000; 
+    outline: none;
+    display: block; 
+    margin: 0 auto;
+}
+
+input:focus {
+    border-color: #ff7e00;
+}
+
+.error-message {
+    font-size: 0.8em; 
+    color: red;
+    display: none;
+}
+
+button {
+    width: 100%; 
+    padding: 10px; 
+    background: #000; 
+    color: #fff; 
+    border: none; 
+    border-radius: 25px; 
+    cursor: pointer; 
+    font-size: 1em; 
+    display: block; 
+    max-width: 15rem; 
+    margin: 0 auto;
+}
+
+button:hover {
+    background: #333;
+}
+
+.bottom-rectangle {
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 130px;
+}
+
+.cat-image {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+    width: 35%;
+    height: auto;
+    margin-left: 10px;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    color: #f6e4d2;
+    text-decoration: none;
+}
+
+
+/*===================================================================*/
+
+/* STYLES FOR LOG-IN PAGE */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+.login-box {
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    border-radius: 25px;
+}
+
+.login-box h1 {
+    display: block;
+    margin-bottom: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.login-box form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-radius: 25px;
+}
+
+.login-box input {
+    padding: 10px;
+    border-radius: 25px;
+    border: 1px solid #000000;
+    font-size: 16px;
+}
+
+.login-box button {
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-box button:hover {
+    background-color: #444;
+}
+
+ 
+
+/*===================================================================*/
+/* Responsive design */
+/*===================================================================*/
+
+/* Large desktop styles */
+@media (min-width: 1200px) {
+    .logo2 {
+        width: 70px;
+    }
+
+    .logo-text2 {
+        font-size: 1.5em;
+    }
+
+    .bottom-rectangle {
+        height: 150px;
+    }
+
+    .cat-image {
+        width: 50%;
+    }
+
+    .login-container {
+        max-width: 600px;
+    }
+
+    .login-box {
+        padding: 25px;
+    }
+
+    .login-box h1 {
+        font-size: 24px;
+    }
+
+    .login-box input, .login-box button {
+        font-size: 18px;
+    }
+
+    .content {
+        align-items: flex-end;
+    }
+
+    .text-section h1 {
+        font-size: 5rem;
+    }
+
+    .text-section p.tagline {
+        font-size: 1.5rem;
+    }
+
+    .buttonStart {
+        align-self: flex-end;
+    }
+
+    .buttonStart .btn {
+        width: 250px;
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .logo-text {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) and (max-width: 1199px) {
+    .logo-container2 {
+        top: 15px;
+        left: 15px;
+    }
+
+    .logo2 {
+        width: 55px;
+    }
+
+    .logo-text2 {
+        font-size: 1.2em;
+    }
+
+    form {
+        width: 85%;
+    }
+
+    .bottom-rectangle {
+        height: 130px;
+    }
+
+    .cat-image {
+        width: 60%;
+    }
+
+    button {
+        display: block;
+        margin-left: 0;
+    }
+
+    .login-container {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .login-box {
+        padding: 15px;
+    }
+
+    .login-box input, .login-box button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .login-box form {
+        margin-left: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-section {
+        padding-right: 20em;
+    }
+
+    .text-section h1 {
+        font-size: 3.5rem;
+    }
+
+    .text-section p.tagline {
+        font-size: 1.3rem;
+    }
+
+    .buttonStart .btn {
+        width: 200px;
+    }
+
+    .logo {
+        width: 70px;
+    }
+
+    .logo-text {
+        font-size: 2rem;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .logo-container2 {
+        top: 10px;
+        left: 10px;
+    }
+
+    .logo2 {
+        width: 45px;
+    }
+
+    .logo-text2 {
+        font-size: 1.1em;
+    }
+
+    form {
+        width: 95%;
+        padding: 15px;
+    }
+
+    button {
+        max-width: 70%;
+        display: block;
+        margin-left: 2.9em;
+    }
+
+    .bottom-rectangle {
+        height: 120px;
+    }
+
+    .cat-image {
+        width: 80%;
+    }
+
+    .login-container {
+        width: 95%;
+    }
+
+    .login-box {
+        padding: 10px;
+    }
+
+    .login-box input, .login-box button {
+        padding: 10px;
+        font-size: 13px;
+    }
+
+    .login-box h1 {
+        font-size: 20px;
+    }
+
+    .text-section {
+        padding-right: 0;
+    }
+
+    .text-section h1 {
+        font-size: 2rem;
+    }
+
+    .text-section p.tagline {
+        font-size: 1rem;
+    }
+
+    .buttonStart .btn {
+        width: 100%;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .logo-text {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commeownity - Sign In</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <script>
+        function validateForm() {
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if (username === "" || password === "") {
+                alert("Please fill in all required fields.");
+            } else {
+                // Redirect to home.html if validation is successful
+                location.href = 'home.html';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo-container2">
+                <img src="images/logocat.png" alt="ComMEOWnity Logo" class="logo2">
+                <span class="logo-text2">OMMEOWNITY</span>
+            </div>
+        </header>
+
+        <div class="login-container">
+            <div class="logo">
+                <img src="laycat.png" alt="laying cat" class="cat-image">
+            </div>
+            <div class="bottom-rectangle"></div>
+            <div class="login-box">
+                <h1>Log-in</h1>
+                <form id="loginForm" onsubmit="event.preventDefault(); validateForm();">
+                    <input type="text" id="username" placeholder="username" required>
+                    <input type="password" id="password" placeholder="password*" required>
+                    <button type="submit">Log-in</button>
+                </form>
+                <img class="cat-image" src="images/laycat.png" alt="Black Cat">
+                <p>Don't have an account? <a href="signup.html">Register here</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
